@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+}
+body {
+  background-color: #aacbb0;
+  margin: 15px;
+}
+.menu-lista {
+  margin: 0 auto;
+  list-style: none;
+  background-color: rgba(0, 50, 0, 0.6);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 1px 25px;
+  max-width: fit-content;
+  box-shadow: 0px 0px 30px #c9ec56;
+}
+.menu-lista li {
+  display: inline-block;
+  margin: 5px;
+}
+.menu-lista li a {
+  display: block;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: 550;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: center; /* Para que el scale sea uniforme */
+  font-size: 24px;
+  z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+.menu-lista li a:hover {
+  color: #c9ec56;
+  cursor: pointer;
+  transform: scale(1.1);
+  padding: 8px 25px;
+}
+.menu-lista li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 80, 20, 0.514);
+  border-radius: 15px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1; /* Asegura que el fondo esté detrás del texto */
+}
+.menu-lista li a:hover::before {
+  transform: scale(1); /* Efecto de "crecimiento" del fondo */
+}
+.menu-lista li a:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s; /* Animación más rápida al hacer clic */
+}
+.titulo {
+  text-align: center;
+  display: space-between;
+  color: #385800;
+  margin: 40px auto;
+  font-size: 50px;
+  text-shadow: black 0px 0px 6px;
+  text-decoration: underline;
+}
+.imgAndParrafo {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin: 40px 100px;
+}
+.img1 {
+  width: 400px;
+  height: auto;
+  border-radius: 7px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.img1:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+.contenedorImg {
+  background-color: rgba(0, 50, 0, 0.6);
+  padding: 7px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 30px #c9ec56;
+  height: auto;
+  width: fit-content;
+}
+.parrafoBeforeAfter {
+  color: white;
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 550;
+}
+.contenedorBeforeAfter {
+  background-color: rgba(0, 50, 0, 0.6);
+  padding: 7px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 27px#c9ec56;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.contenedor-img-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+}
+.parrafo {
+  color: white;
+  font-size: 23px;
+  text-align: justify;
+  line-height: 1.5;
+  margin: 10px;
+}
+.contenedorParrafo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(0, 50, 0, 0.6);
+  padding: 7px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 30px #c9ec56;
+  width: fit-content;
+}
+.tituloParrafo{
+  text-align: center;
+  justify-content: space-between;
+  color: #c9ec56;
+  font-weight: 550;
+}
+.listaParrafo{
+  color: white;
+  font-size: 23px;
+  text-align: justify;
+  line-height: 1.5;
+  max-width: 100%;
+  padding-left: 35px;
+  margin: 10px;
+}
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 50, 0, 0.6);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 30px #c9ec56;
+}
+.calculadora label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px;
+  font-weight: 550;
+}
+.calculadora input {
+  width: 70%;
+  height: 15px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: white;
+}
+.calculadora button {
+  display: flex;
+  margin: 0 auto;
+  background-color: #c9ec56;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0px 0px 15px #c9ec56;
+  transition: all 0.3s ease;
+  font-weight: 550;
+}
+.calculadora button[type="submit"] {
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px auto;
+}
+.calculadora button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s ease;
+}
+.calculadora button:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s; /* Animación más rápida al hacer clic */
+}
+.calculadora input[type="number"] {
+  outline: #c9ec56 solid 5px;
+  border: #385800 solid 2px;
+}
+.recomendaciones {
+  background-color: rgba(0, 50, 0, 0.6);
+  width: fit-content;
+  margin: 30px auto;
+  padding: 25px 100px; 
+  border-radius: 9px;
+  box-shadow: 0px 0px 30px #c9ec56;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;       
+}
+.resultado-calculadora {
+  text-align: center;
+  color: #c9ec56;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 550;
+  text-decoration: underline;
+}
+.resultado-contenido {
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.5;
+}
+.resultado-contenido ul {
+  list-style: none;
+}
+.recomendaciones.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries para responsive */
+@media (max-width: 1200px) {
+  .imgAndParrafo {
+    gap: 50px;
+    margin: 40px 15px;
+  }
+  .img1 {
+    width: 350px;
+  }
+}
+@media (max-width: 992px) {
+  .menu-lista {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .menu-lista li a {
+    padding: 10px 15px;
+    font-size: 20px;
+  }
+  .titulo {
+    font-size: 40px;
+    margin: 30px auto;
+  }
+  .imgAndParrafo {
+    gap: 30px;
+  }
+  .img1 {
+    width: 300px;
+  }
+  .parrafo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgAndParrafo {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 10px;
+  }
+  .contenedorImg,
+  .contenedorParrafo {
+    width: 100%;
+    max-width: 500px;
+  }
+  .img1 {
+    width: 100%;
+  }
+  .menu-lista li a {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  .titulo {
+    font-size: 32px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    margin: 10px;
+  }
+  .menu-lista {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .menu-lista li {
+    margin: 3px;
+  }
+  .menu-lista li a {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+  .titulo {
+    font-size: 28px;
+    margin: 15px auto;
+  }
+  .parrafo {
+    font-size: 16px;
+  }
+  .contenedorImg,
+  .contenedorParrafo {
+    padding: 5px;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-img-texto {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .listaParrafo {
+    font-size: 18px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listaParrafo {
+    font-size: 16px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .listaParrafo {
+    font-size: 14px;
+    padding-left: 20px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 992px) {
+  .calculadora {
+    width: 90%;
+    padding: 15px 5px;
+  }
+  .calculadora label {
+    font-size: 20px;
+  }
+  .recomendaciones {
+    padding: 20px 50px;
+  }
+  .resultado-calculadora {
+    font-size: 28px;
+  }
+  .resultado-contenido {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculadora {
+    width: 95%;
+  }
+  .calculadora label {
+    font-size: 18px;
+  }
+  .calculadora input {
+    width: 85%;
+  }
+  .recomendaciones {
+    padding: 15px 30px;
+    width: 90%;
+  }
+  .resultado-calculadora {
+    font-size: 24px;
+  }
+  .resultado-contenido {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .calculadora {
+    padding: 10px;
+  }
+  .calculadora label {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .calculadora button[type="submit"] {
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 15px auto;
+  }
+  .recomendaciones {
+    padding: 10px 15px;
+  }
+  .resultado-calculadora {
+    font-size: 20px;
+  }
+  .resultado-contenido {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-lista li a {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  .calculadora input {
+    width: 90%;
+  }
+}

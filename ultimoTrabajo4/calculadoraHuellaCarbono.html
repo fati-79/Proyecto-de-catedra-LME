@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora - Huella De Carbono</title>
+    <link rel="stylesheet" href="css/calculadora.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ul class="menu-lista">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li>
+        <a href="huellaCarbono.html">¿Qué es la huella de carbono?</a>
+      </li>
+      <li><a href="comoreducir.html">¿Como reducirla?</a></li>
+      <li><a href="Impacto Global.html">Impacto Global</a></li>
+      <li>
+        <a href="calculadoraHuellaCarbono.html"
+          >Calculadora De Huella de Carbono</a
+        >
+      </li>
+    </ul>
+    <h1 class="titulo">Calculadora de Huella de Carbono</h1>
+    <!-- Contenedor del parrafo principal y la imagen de su izquierda -->
+    <div class="imgAndParrafo">
+      <!-- Contenedor de la imagen de la izquierda y el texto pequenio por debajo de ella -->
+      <div class="contenedor-img-texto">
+        <div class="contenedorImg">
+          <img src="img/before_after.jpg" alt="img_before_after" class="img1" />
+        </div>
+        <div class="contenedorBeforeAfter">
+          <p class="parrafoBeforeAfter">Un "ANTES" y "DESPUÉS"</p>
+        </div>
+      </div>
+      <!-- Contenedor del parrado principal -->
+      <div class="contenedorParrafo">
+        <p class="parrafo">
+          ¿Sabías que todas nuestras actividades diarias generan emisiones de
+          gases de efecto invernadero? Desde encender una luz, usar el
+          transporte, hasta consumir productos, todo deja una marca en el
+          planeta: tu huella de carbono. Esta herramienta te permitirá calcular
+          de forma aproximada cuánto CO<sub>2</sub> emites en tu vida cotidiana,
+          y descubrir cómo puedes reducirlo con acciones sencillas pero
+          efectivas.
+        </p>
+        <h2 class="tituloParrafo">
+          ¿Por qué es importante calcular tu huella?
+        </h2>
+        <ul class="listaParrafo">
+          <p>Conocer tu huella te ayuda a:</p>
+          <li>Tomar decisiones más sostenibles.</li>
+          <li>Identificar áreas donde puedes mejorar.</li>
+          <li>Contribuir activamente a la lucha contra el cambio climático.</li>
+        </ul>
+      </div>
+    </div>
+    <section class="calculadora">
+      <form id="carbonForm">
+        <label>
+          Km en auto por semana:
+          <input type="number" id="auto" required />
+        </label>
+        <br />
+        <label>
+          Gasto mensual en electricidad ($):
+          <input type="number" id="gastoElectrico" required />
+        </label>
+        <br />
+        <label>
+          Porciones de carne por semana:
+          <input type="number" id="carne" required />
+        </label>
+        <br />
+        <label>
+          Minutos de ducha al día:
+          <input type="number" id="agua" required />
+        </label>
+        <br />
+        <button type="submit">Calcular Huella</button>
+      </form>
+    </section>
+    <section class="recomendaciones">
+      <h2 class="resultado-calculadora">Resultado</h2>
+      <div id="resultado" class="resultado"></div>
+    </section>
+    <script src="JS/calculadora.js"></script>
+  </body>
+</html>

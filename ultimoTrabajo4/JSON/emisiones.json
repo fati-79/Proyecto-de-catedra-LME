@@ -1,0 +1,7 @@
+[
+  { "pais": "Estados Unidos", "lat": 37.8, "lon": -96, "emisiones": "14%" },
+  { "pais": "China", "lat": 35.8, "lon": 104.1, "emisiones": "30%" },
+  { "pais": "India", "lat": 20.6, "lon": 78.9, "emisiones": "7%" },
+  { "pais": "Unión Europea", "lat": 50, "lon": 10, "emisiones": "6%" },
+  { "pais": "Resto del Mundo", "lat": 0, "lon": 0, "emisiones": "43%" }
+]
