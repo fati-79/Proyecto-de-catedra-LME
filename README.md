@@ -16,6 +16,6 @@ Este sitio web educativo tiene como objetivo informar y concientizar sobre la **
 - JavaScript 
 - JSON
 
- Cómo usar el sitio
+ 
 
  
